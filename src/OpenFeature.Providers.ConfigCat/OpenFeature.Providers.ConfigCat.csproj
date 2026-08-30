@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>OpenFeature.Contrib.Providers.ConfigCat</PackageId>
+    <PackageId>OpenFeature.Providers.ConfigCat</PackageId>
     <VersionNumber>0.1.1</VersionNumber> <!--x-release-please-version -->
     <VersionPrefix>$(VersionNumber)</VersionPrefix>
     <AssemblyVersion>$(VersionNumber)</AssemblyVersion>
@@ -9,6 +9,7 @@
     <Description>ConfigCat provider for .NET</Description>
     <Authors>Luiz Bon</Authors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
     <!-- make the internal methods visble to our test project -->
@@ -17,7 +18,7 @@
     </AssemblyAttribute>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="ConfigCat.Client" Version="9.3.2" />
+    <PackageReference Include="ConfigCat.Client" Version="10.0.0" />
     <PackageReference Include="OpenFeature" Version="[2.0,3.0)" />
   </ItemGroup>
 </Project>
