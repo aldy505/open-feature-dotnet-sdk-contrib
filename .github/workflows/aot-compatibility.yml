@@ -61,17 +61,9 @@ jobs:
           global-json-file: global.json
           source-url: https://nuget.pkg.github.com/open-feature/index.json
 
-      - name: Restore dependencies
-        shell: pwsh
-        run: dotnet restore
-
-      - name: Build solution
-        shell: pwsh
-        run: dotnet build -c Release --no-restore
-
       - name: Test AOT compatibility project build
         shell: pwsh
-        run: dotnet build test/OpenFeature.Providers.Ofrep.AotCompatibility/OpenFeature.Providers.Ofrep.AotCompatibility.csproj -c Release --no-restore
+        run: dotnet build test/OpenFeature.Providers.Ofrep.AotCompatibility/OpenFeature.Providers.Ofrep.AotCompatibility.csproj -c Release
 
       - name: Publish AOT compatibility test (cross-platform)
         shell: pwsh
