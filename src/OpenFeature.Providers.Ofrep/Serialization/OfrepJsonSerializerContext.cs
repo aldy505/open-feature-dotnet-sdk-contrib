@@ -12,6 +12,8 @@ namespace OpenFeature.Providers.Ofrep.Serialization;
 [JsonSerializable(typeof(int))]
 [JsonSerializable(typeof(double))]
 [JsonSerializable(typeof(object))]
+[JsonSerializable(typeof(DateTime))]
+[JsonSerializable(typeof(List<object?>))]
 [JsonSerializable(typeof(IDictionary<string, object?>))]
 [JsonSerializable(typeof(Dictionary<string, object?>))]
 [JsonSerializable(typeof(OfrepRequest))]

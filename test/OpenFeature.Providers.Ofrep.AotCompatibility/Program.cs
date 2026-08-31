@@ -17,6 +17,12 @@ using var provider = new OfrepProvider(options);
 var context = EvaluationContext.Builder()
     .Set("targetingKey", "native-aot-user")
     .Set("plan", "gold")
+    .Set("updatedAt", new DateTime(2024, 1, 2, 3, 4, 5, DateTimeKind.Utc))
+    .Set("tags", new Value(new List<Value> { new("beta"), new("gold") }))
+    .Set("attributes", Structure.Builder()
+        .Set("tier", 3)
+        .Set("loyal", true)
+        .Build())
     .Build();
 
 using var cancellation = new CancellationTokenSource();
