@@ -273,7 +273,7 @@ internal sealed partial class OfrepClient : IOfrepClient
             }
         }
 
-        return new OfrepResponse<T>(rawResponse.Key, resolvedValue)
+        return new OfrepResponse<T>(rawResponse.Key ?? flagKey, resolvedValue)
         {
             ErrorCode = rawResponse.ErrorCode,
             ErrorMessage = rawResponse.ErrorMessage,
@@ -318,7 +318,7 @@ internal sealed partial class OfrepClient : IOfrepClient
             resolvedValue = defaultValue;
         }
 
-        var evaluationResponse = new OfrepResponse<T>(rawResponse.Key, resolvedValue)
+        var evaluationResponse = new OfrepResponse<T>(rawResponse.Key ?? flagKey, resolvedValue)
         {
             ErrorCode = rawResponse.ErrorCode,
             ErrorMessage = rawResponse.ErrorMessage,
